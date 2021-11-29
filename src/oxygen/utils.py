@@ -31,7 +31,7 @@ def run_command_line(command, check_return_code=True, **env):
 def validate_path(filepath):
     path = Path(filepath)
     if not path.exists():
-        raise ResultFileNotFoundException(f'File "{path}" does not exits')
+        raise ResultFileNotFoundException(f'File "{path}" does not exist')
     if path.is_dir():
         raise ResultFileIsNotAFileException(f'File "{path}" is not a file, '
                                             'but a directory')
